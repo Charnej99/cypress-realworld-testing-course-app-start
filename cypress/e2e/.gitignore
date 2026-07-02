@@ -1,0 +1,16 @@
+content/courses/testing-foundations/testing-is-a-mindset.mdx
+        cypress/e2e/AmaTrack Admin Portal.cy.ts
+        cypress/e2e/AmaTrack CM ACtions.cy.ts
+        cypress/e2e/AmaTrack Client Management.cy.ts
+        cypress/e2e/AmaTrack Site Management.cy.ts
+        cypress/e2e/AmaTrack User Management.cy.ts
+        cypress/e2e/PN_ Payment Terms.cy.ts
+        cypress/e2e/PN_Bulk Top.cy.ts
+        cypress/e2e/PN_Payment Terms - Customers.cy.ts
+        cypress/e2e/PN_Payment Terms.cy.ts 
+        cypress/e2e/PN_Payments Terms - Accounts.cy.ts
+        cypress/e2e/Talbot Analytics.cy.ts
+        cypress/e2e/email-file.js
+        cypress/e2e/ftp-upload.js
+        tsconfig.json
+        
