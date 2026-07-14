@@ -1,0 +1,23 @@
+it.only('Check In User', function(){
+
+    cy.visit('http://localhost:9950/')
+
+it.only('Allows users to login in with username')
+cy.get('#username').type('admin')
+cy.get('#password').type('Admin@1234')
+cy.get('.btn > span').click()
+
+it.only('Allows admin user to check in employee')
+cy.get('.pos-menu-toggle > .bi').click()
+cy.get ('.d-flex > .btn-primary').click()
+cy.get ('#checkInCheckoutModal > .modal-dialog > .modal-content > .modal-body > form > .mb-3 > #productNameInput').type('EMP-BAR-003')
+
+it.only('Allows admin user to verify the check in of employee')
+cy.get('#checkInCheckoutModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+
+it.only('Admin user must confirm check in')
+cy.get('#checkInCheckoutModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+
+it.only('Allows image to be captured')
+cy.get('.web-selfie-capture-button').click()
+})

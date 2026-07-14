@@ -1,13 +1,18 @@
 it.only('Product Management Screen', function(){
 
-    cy.visit('https://ztpos-cfcxdea4hsb0gdbj.westeurope-01.azurewebsites.net/#')
+    cy.visit('http://localhost:9950/')
+    false
+
+it.only('Allows users to login in with username')
+cy.get('#username').type('admin')
+cy.get('#password').type('Admin@1234')
+cy.get('.btn > span').click()
 
 it.only('Allows users to navigate to the Product Management screen')
-cy.get('[href="ProductsManagement"]').click()
+cy.get('.pos-menu-toggle > .bi').click()
 
 it.only('Allows users to Add Product')
-cy.get('.w-100 > .btn').click()
-cy.wait(1000)
+cy.get('.navbar-nav > .active').click()
 
 it.only('Allows users to add the product name')
 cy.get('#productNameInput').type('CypressTest')

@@ -1,22 +1,27 @@
 it.only('New Order Screen', function(){
 
-    cy.visit('https://ztpos-cfcxdea4hsb0gdbj.westeurope-01.azurewebsites.net/#')
+    cy.visit('http://localhost:9950/')
 
-it.only('Allows user to click on New Order Feature')
-cy.get('[href=""]').click()
+it.only('Allows users to login in with username')
+cy.get('#username').type('admin')
+cy.get('#password').type('Admin@1234')
+cy.get('.btn > span').click()
 
-it.only('Allows users to add reference for customer')
-cy.get('#referenceField').type('CypressTest')
+it.only('Allows user to click on product for new order screen')
+cy.get('.product-list > .row > :nth-child(1) > .card').click()
 
-it.only('Allows users add preference of where the customer would be eating')
-cy.get('.col-7 > .row > :nth-child(2) > .btn').click()
+it.only('Allows users to check out the order')
+cy.get('.pos-cart-actions > .btn-primary').click()
 
-it.only('Allows users to choose products for customer')
-cy.get('.product-list > .row > :nth-child(11) > .card > .card-body').click()
+it.only('Allows user to select the payment method')
+cy.get('#paymentTypeModal > .modal-dialog > .modal-content > .modal-body > .row > :nth-child(1) > .btn').click()
 
-it.only('Allows users to click on Remove option')
-cy.get(':nth-child(3) > :nth-child(2) > .btn').click()
+it.only('Allows user to add a tip amount')
+cy.get('#tipInput').click().type('50')
 
-it.only('Allows users to click on Check Out for New Order')
-cy.get('.col-12 > :nth-child(1)').click()
+it.only('Allows user to complete the paid order')
+cy.get('.fixed-bottom > .d-flex > .btn-primary').click()
+
+it.only('Allows user to click on okay for order that is complete')
+cy.get('.col-12 > .btn').click()
 })
